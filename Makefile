@@ -12,7 +12,7 @@ obj/%.o: %.s
 	as6502 --target=x16 --list-file=$(@:%.o=%.lst) -o $@ $<
 
 obj/%.o: %.c
-	cc6502 --target=x16 -O2 --list-file=$(@:%.o=%.lst) -o $@ $< -DCOMMODORE
+	cc6502 --target=x16 -O2 --list-file=$(@:%.o=%.lst) -o $@ $<
 
 obj/%-debug.o: %.s
 	as6502 --target=x16 --debug --list-file=$(@:%.o=%.lst) -o $@ $<
